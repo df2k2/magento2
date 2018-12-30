@@ -20,13 +20,15 @@ class CompositeConfigProcessor implements WysiwygConfigDataProcessorInterface
     /**
      * @var array
      */
-    private $eavWysiwygDataProcessors = [];
+    private $eavWysiwygDataProcessors;
 
     /**
      * CompositeConfigProcessor constructor.
-     * @param array $eavWysiwygDataProcessors
+     *
+     * @param Logger $logger
+     * @param array  $eavWysiwygDataProcessors
      */
-    public function __construct(Logger $logger, array $eavWysiwygDataProcessors)
+    public function __construct(Logger $logger, array $eavWysiwygDataProcessors = [])
     {
         $this->logger = $logger;
         $this->eavWysiwygDataProcessors = $eavWysiwygDataProcessors;
