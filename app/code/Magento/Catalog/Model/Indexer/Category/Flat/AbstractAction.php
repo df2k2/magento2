@@ -130,7 +130,7 @@ class AbstractAction
         $table = $this->connection->newTable(
             $tableName
         )->setComment(
-            sprintf("Catalog Category Flat", $tableName)
+            'Catalog Category Flat'
         );
 
         //Adding columns
