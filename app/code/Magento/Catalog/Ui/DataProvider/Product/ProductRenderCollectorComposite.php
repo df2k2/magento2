@@ -3,6 +3,9 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
+
+declare(strict_types=1);
+
 namespace Magento\Catalog\Ui\DataProvider\Product;
 
 use Magento\Catalog\Api\Data\ProductInterface;
@@ -17,7 +20,7 @@ class ProductRenderCollectorComposite implements ProductRenderCollectorInterface
     /**
      * @var ProductRenderCollectorInterface[]
      */
-    private $productProviders = [];
+    private $productProviders;
 
     /**
      * ProductRenderCollectorComposite constructor.
